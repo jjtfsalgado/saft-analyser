@@ -1,0 +1,66 @@
+@import "base/variables";
+@import "~susy/sass/susy";
+
+//foundation
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;
+
+//Components
+
+$susy:(
+	columns:12,
+	gutters:0,
+	math:fluid,
+	output:float,
+	gutter-position:inside,
+	container-position: center,
+);
+
+.container{
+  @include span(12);
+	width: 500px;
+	height:380px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+	.title-board{
+		@include span(12);
+		position: relative;
+
+		.row1{
+			@include span(12);
+			text-align: center;
+		}
+
+		.row2{
+			@include span(12);
+			text-align: center;
+
+			.col1{
+			 @include span(2);
+			}
+
+			.col2{
+			 @include span(3 at 3);
+			}
+
+			.col3{
+			 @include span(4 at 6);
+			}
+
+			.col4{
+		 	 @include span(3 at 10);
+			}
+		}
+
+	}
+
+  .body-board{
+    @include span(12);
+		position: relative;
+		text-align: center;
+
+  }
+}
